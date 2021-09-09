@@ -1,0 +1,50 @@
+        if (dirction == 'A')
+        {
+            snake_head_x = snake_head_x - 1;
+            if (snake_head_x < 0)
+            {
+                snake_head_x = snake_head_x + grid_column;
+            }
+        }
+        else if (dirction == 'D')
+        {
+            snake_head_x = snake_head_x + 1;
+            if (snake_head_x >= grid_column)
+            {
+                snake_head_x = snake_head_x - grid_column;
+            }
+        }
+        else if (dirction == 'S')
+        {
+            snake_head_y = snake_head_y + 1;
+            if (snake_head_y >= grid_row)
+            {
+                snake_head_y = snake_head_y - grid_row;
+            }
+        }
+        else if (dirction == 'W')
+        {
+            snake_head_y = snake_head_y - 1;
+            if (snake_head_y < 0)
+            {
+                snake_head_y = snake_head_y + grid_row;
+            }
+        }
+        if (c == 'A')
+            if (--hx < 0)
+                hx += col;
+        else if (c == 'D')
+            if (++hx >= col)
+                hx -= col;
+        else if (c == 'S')
+            if (++hy >= row)
+                hy -= row;
+        else if (c == 'W')
+            if (--hy < 0)
+                hy += row;
+        c == 'A' && --hx < 0 && (hx += col);
+        c == 'D' && ++hx >= col && (hx -= col);
+        c == 'S' && ++hy >= row && (hy -= row);
+        c == 'W' && --hy < 0 && (hy += row);
+        t = row, p = c & 2 ? t = col, &hx : &hy;
+        *p += c / 3 & 2, *p = (--*p + t) % t;

@@ -1,0 +1,16 @@
+// A code of get mouse input, Using the WinAPI, this is just an example.
+for (GetNumberOfConsoleInputEvents(hIn, &i); 0 < i; --i)
+{
+	ReadConsoleInput(hIn, &Buf, 1, &Result);
+	if (i == 1)
+		mouse.pos = Buf.Event.MouseEvent.dwMousePosition;
+	if (Buf.Event.MouseEvent.dwButtonState)
+	{
+		switch (Buf.Event.MouseEvent.dwButtonState)
+		{
+		case FROM_LEFT_1ST_BUTTON_PRESSED: mouse.LB = True; break;
+		case FROM_LEFT_2ND_BUTTON_PRESSED: mouse.MB = True; break;
+		case RIGHTMOST_BUTTON_PRESSED: mouse.RB = True; break;
+		}
+	}
+}
