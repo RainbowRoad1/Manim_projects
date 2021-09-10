@@ -4,6 +4,11 @@
 
 目前仅上传部分代码, 有删改, 以后有时间再整理  
 
+my_utils, 一些轮子的整合  
+my_scenes, 制作视频的源码  
+考虑到以后会更改源码, 所以my_scenes的源码都整合在单个文件里  
+暂时就这样, 可能还会翻新一遍...
+
 bilibili ID: 你已经是大佬啦快和萌新们聊天吧 ([传送门](https://space.bilibili.com/345058248))  
 如果想学习manim可以了解一下这个: https://manim.org.cn/  
 一个交流manim的QQ群：862671480  
